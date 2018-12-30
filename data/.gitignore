@@ -1,0 +1,3 @@
+grafana.db
+grafana.db-journal
+./sessions/

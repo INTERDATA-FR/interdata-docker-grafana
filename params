@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export DOCKER_FILE                      = docker-compose.yml
+
+export UBUNTU_IMAGE_NAME                = ubuntu
+export UBUNTU_IMAGE_TAG                 = 18.04
+export UBUNTU_IMAGE			= $(UBUNTU_IMAGE_NAME):$(UBUNTU_IMAGE_TAG)
+
+
+export GRAFANA_CONTAINER_NAME           = interdata_grafana
+export GRAFANA_EXPOSE_HTTP              = 80
+export GRAFANA_IMAGE_NAME               = interdatafr/interdata-docker-grafana
+export GRAFANA_IMAGE_VERSION            = 5.4.2
+
+export GRAFANA_IMAGE_TAG                = v$(UBUNTU_IMAGE_TAG)_$(GRAFANA_IMAGE_VERSION)
