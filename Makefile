@@ -43,6 +43,10 @@ destroy:
 	rm -Rf ./data/*
 	./scripts/docker-clean-all.sh
 
+docker-push:
+	docker tag $(GRAFANA_IMAGE_NAME):$(GRAFANA_IMAGE_TAG) $(GRAFANA_IMAGE_NAME):$(GRAFANA_IMAGE_TAG)
+	docker push $(GRAFANA_IMAGE_NAME):$(GRAFANA_IMAGE_TAG)
+
 rebuild: destroy clean-all build start
 
 restart:
